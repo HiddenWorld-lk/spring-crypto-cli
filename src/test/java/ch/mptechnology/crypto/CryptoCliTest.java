@@ -13,7 +13,7 @@ class CryptoCliTest {
 
     @Test
     void encryptAndDecrypt() {
-        TextEncryptor textEncryptor = CryptoCli.createTextEncryptor(SECRET, CryptoCli.HARD_CODED_SALT);
+        TextEncryptor textEncryptor = CryptoCli.createTextEncryptor(SECRET, CryptoCli.HARD_CODED_SALT, CryptoCli.DEFAULT_MODE_OF_AES);
         String encrypted = textEncryptor.encrypt(MESSAGE);
         assertNotEquals(MESSAGE, encrypted);
         assertNotEquals(SECRET, encrypted);
