@@ -21,10 +21,10 @@ alias spring-crypto-cli='java -jar ./bin/spring-crypto-cli-1.1.0-jar-with-depend
 ```
 
 ## Usage
-The examples below will use this alias.
+The examples below will use this alias. The salt must be hex encoded(0-e).
 ### Encryption
 ```
-spring-crypto-cli encrypt --message "Hello" --key "test" --salt "mysalt"  --mode "GCM"
+spring-crypto-cli encrypt --message "Hello" --key "test" --salt "abba"  --mode "GCM"
 ```
 returns something like:
 ```
@@ -33,7 +33,7 @@ db13bc5a9a7e919a4f95508ae2558b6c8c92b5e75a83bea4dd0d5802030ab064
 
 ### Decryption
 ```
-spring-crypto-cli decrypt --message "6d3de18155ea5faa717ecd34e9443d3f73867664fc8977829c4382c4878fcf1c" --key "test" --salt "mysalt" --mode "GCM"
+spring-crypto-cli decrypt --message "6d3de18155ea5faa717ecd34e9443d3f73867664fc8977829c4382c4878fcf1c" --key "test" --salt "abba" --mode "GCM"
 ```
 returns:
 ```
